@@ -1,5 +1,3 @@
-/* TODO: inserite il codice JavaScript necessario a completare il MHW! */
-
 
 
 function ChooseImage(event) {
@@ -171,7 +169,7 @@ for(const box of selected){
 }
 
 
-//PRIMA API
+/*--------------------------------------------PRIMA API--------------------------------------------*/
 
 
  function onJson(json){
@@ -331,7 +329,7 @@ for(const box of selected){
 
 
   if(questionid==0){
-    //SECONDA API, CON OAuth2
+    /*--------------------------------------------SECONDA API, OAuth2 --------------------------------------------*/
     anime_input = document.querySelector('[data-form-id="0"] .anime');
 
     const anime_value = encodeURIComponent(anime_input.value);
@@ -371,18 +369,17 @@ for(const box of selected){
   titleContainer.textContent= "Quale Pokémon di tipo " + anime_value + " ti piace di più?";
 
   console.log('Eseguo ricerca: ' + anime_value);
-  // Prepara la richiesta
   rest_url = 'https://pokeapi.co/api/v2/type/' + anime_value;
 
   console.log('URL: ' + rest_url);
-  // Esegui fetch
+
  
   fetch(rest_url).then(onResponse).then(onJson);
    }
   }
 
 
-//SECONDA API, con OAuth2
+/*--------------------------------------------SECONDA API, OAuth2 --------------------------------------------*/
  function onJsonAuth(json) {
   console.log(json);
   console.log('JSON ricevuto');
@@ -417,7 +414,6 @@ for(const box of selected){
 function onTokenJson(json)
 {
   console.log(json)
-  // Imposta il token global
   token = json.access_token;
 }
 

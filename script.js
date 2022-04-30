@@ -321,7 +321,7 @@ for(const box of selected){
 
   // Impedisci il submit del form
   event.preventDefault();
-  //riprendere da qua
+
   questionid= selected.dataset.formId;
     let cont=0;
     let anime_input=0;
